@@ -1,0 +1,118 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="634" height="372" view_box="0 0 634 372"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Wed, 10 Nov 2021 00:31:20</desc>
+
+<rect id="frame" x="0" y="0" width="634" height="372" fill="#f5f5f5" stroke="none" stroke-width="0"/>
+
+<!-- Association CONTIENT -->
+<line x1="299" y1="51" x2="113" y2="51" stroke="#35978f" stroke-width="2"/>
+<text x="188" y="68.0" fill="#8c510a" font-family="Verdana" font-size="12">1,N</text>
+<line x1="113" y1="186" x2="113" y2="51" stroke="#35978f" stroke-width="2"/>
+<text x="118.0" y="110" fill="#8c510a" font-family="Verdana" font-size="12">1,N</text>
+<path d="M 113.0 118.0 L 107.0 106.0 L 113.0 110.0 L 119.0 106.0 Z" fill="#35978f" stroke-width="0"/>
+<g id="association-CONTIENT">
+	<path d="M 138 26 a 14 14 90 0 1 14 14 V 51 h -78 V 40 a 14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+	<path d="M 152 51.0 v 11 a 14 14 90 0 1 -14 14 H 88 a 14 14 90 0 1 -14 -14 V 51.0 H 78" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+	<rect x="74" y="26" width="78" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+	<line x1="74" y1="51" x2="152" y2="51" stroke="#35978f" stroke-width="1"/>
+	<text x="81" y="43.7" fill="#000000" font-family="Verdana" font-size="12">CONTIENT</text>
+</g>
+
+<!-- Association CRÉE -->
+<line x1="478" y1="186" x2="478" y2="51" stroke="#35978f" stroke-width="2"/>
+<text x="483.0" y="119" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+<line x1="299" y1="51" x2="478" y2="51" stroke="#35978f" stroke-width="2"/>
+<text x="388" y="68.0" fill="#8c510a" font-family="Verdana" font-size="12">1,1</text>
+<path d="M 383.0 51.0 L 395.0 45.0 L 391.0 51.0 L 395.0 57.0 Z" fill="#35978f" stroke-width="0"/>
+<g id="association-CRÉE">
+	<path d="M 488 26 a 14 14 90 0 1 14 14 V 51 h -48 V 40 a 14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+	<path d="M 502 51.0 v 11 a 14 14 90 0 1 -14 14 H 468 a 14 14 90 0 1 -14 -14 V 51.0 H 48" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+	<rect x="454" y="26" width="48" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+	<line x1="454" y1="51" x2="502" y2="51" stroke="#35978f" stroke-width="1"/>
+	<text x="461" y="43.7" fill="#000000" font-family="Verdana" font-size="12">CRÉE</text>
+</g>
+
+<!-- Association APPARTIENT À -->
+<line x1="113" y1="186" x2="113" y2="321" stroke="#35978f" stroke-width="2"/>
+<text x="118.0" y="271" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+<path d="M 113.0 254.0 L 119.0 266.0 L 113.0 262.0 L 107.0 266.0 Z" fill="#35978f" stroke-width="0"/>
+<line x1="299" y1="321" x2="113" y2="321" stroke="#35978f" stroke-width="2"/>
+<text x="172" y="338.0" fill="#8c510a" font-family="Verdana" font-size="12">0,N</text>
+<path d="M 199.0 321.0 L 187.0 327.0 L 191.0 321.0 L 187.0 315.0 Z" fill="#35978f" stroke-width="0"/>
+<g id="association-APPARTIENT À">
+	<path d="M 153 296 a 14 14 90 0 1 14 14 V 321 h -108 V 310 a 14 14 90 0 1 14 -14" fill="#80cdc1" stroke="#80cdc1" stroke-width="0"/>
+	<path d="M 167 321.0 v 11 a 14 14 90 0 1 -14 14 H 73 a 14 14 90 0 1 -14 -14 V 321.0 H 108" fill="#c7eae5" stroke="#c7eae5" stroke-width="0"/>
+	<rect x="59" y="296" width="108" height="50" fill="none" rx="14" stroke="#35978f" stroke-width="2"/>
+	<line x1="59" y1="321" x2="167" y2="321" stroke="#35978f" stroke-width="1"/>
+	<text x="66" y="313.7" fill="#000000" font-family="Verdana" font-size="12">APPARTIENT À</text>
+</g>
+
+<!-- Entity LIST -->
+<g id="entity-LIST">
+	<g id="frame-LIST">
+		<rect x="215" y="9" width="168" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+		<rect x="215" y="34.0" width="168" height="59" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+		<rect x="215" y="9" width="168" height="84" fill="none" stroke="#bf812d" stroke-width="2"/>
+		<line x1="215" y1="34" x2="383" y2="34" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="285" y="26.7" fill="#000000" font-family="Verdana" font-size="12">LIST</text>
+	<text x="220" y="51.8" fill="#000000" font-family="Verdana" font-size="12">ref_list:SERIAL PK</text>
+	<line x1="220" y1="54" x2="332" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="220" y="68.8" fill="#000000" font-family="Verdana" font-size="12">name : VARCHAR(255)</text>
+	<text x="220" y="85.8" fill="#000000" font-family="Verdana" font-size="12">author: REFERENCE 'user'</text>
+</g>
+
+<!-- Entity USER -->
+<g id="entity-USER">
+	<g id="frame-USER">
+		<rect x="331" y="127" width="294" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+		<rect x="331" y="152.0" width="294" height="93" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+		<rect x="331" y="127" width="294" height="118" fill="none" stroke="#bf812d" stroke-width="2"/>
+		<line x1="331" y1="152" x2="625" y2="152" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="461" y="144.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
+	<text x="336" y="169.7" fill="#000000" font-family="Verdana" font-size="12">ref_user:SERIAL PK</text>
+	<line x1="336" y1="172" x2="457" y2="172" stroke="#000000" stroke-width="1"/>
+	<text x="336" y="186.8" fill="#000000" font-family="Verdana" font-size="12">login : VARCHAR(255) NOT NULL UNIQUE</text>
+	<text x="336" y="203.8" fill="#000000" font-family="Verdana" font-size="12">role:varchar(255) NOT NULL</text>
+	<text x="336" y="220.8" fill="#000000" font-family="Verdana" font-size="12">password : VARCHAR(255) NOT NULL UNIQUE</text>
+	<text x="336" y="237.8" fill="#000000" font-family="Verdana" font-size="12">email : text NOT NULL UNIQUE</text>
+</g>
+
+<!-- Entity CARD -->
+<g id="entity-CARD">
+	<g id="frame-CARD">
+		<rect x="9" y="118" width="208" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+		<rect x="9" y="143.0" width="208" height="111" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+		<rect x="9" y="118" width="208" height="136" fill="none" stroke="#bf812d" stroke-width="2"/>
+		<line x1="9" y1="143" x2="217" y2="143" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="95" y="135.7" fill="#000000" font-family="Verdana" font-size="12">CARD</text>
+	<text x="14" y="160.7" fill="#000000" font-family="Verdana" font-size="12">ref_card:SERIAL PK</text>
+	<line x1="14" y1="163" x2="134" y2="163" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="177.7" fill="#000000" font-family="Verdana" font-size="12">title : VARCHAR(255) NOT NULL</text>
+	<text x="14" y="194.8" fill="#000000" font-family="Verdana" font-size="12">position : INT NOT NULL</text>
+	<text x="14" y="211.8" fill="#000000" font-family="Verdana" font-size="12">color : VARCHAR(255)</text>
+	<text x="14" y="228.8" fill="#000000" font-family="Verdana" font-size="12">list_id:INT</text>
+	<text x="14" y="245.8" fill="#000000" font-family="Verdana" font-size="12">label_id : INT REFERENCE ‘label’</text>
+</g>
+
+<!-- Entity LABEL -->
+<g id="entity-LABEL">
+	<g id="frame-LABEL">
+		<rect x="199" y="279" width="200" height="25" fill="#dfc27d" stroke="#dfc27d" stroke-width="0"/>
+		<rect x="199" y="304.0" width="200" height="59" fill="#f6e8c3" stroke="#f6e8c3" stroke-width="0"/>
+		<rect x="199" y="279" width="200" height="84" fill="none" stroke="#bf812d" stroke-width="2"/>
+		<line x1="199" y1="304" x2="399" y2="304" stroke="#bf812d" stroke-width="1"/>
+	</g>
+	<text x="280" y="296.7" fill="#000000" font-family="Verdana" font-size="12">LABEL</text>
+	<text x="204" y="321.8" fill="#000000" font-family="Verdana" font-size="12">name :ref_label:SERIAL PK</text>
+	<line x1="204" y1="324" x2="370" y2="324" stroke="#000000" stroke-width="1"/>
+	<text x="204" y="338.8" fill="#000000" font-family="Verdana" font-size="12">VARCHAR(255) NOT NULL</text>
+	<text x="204" y="355.8" fill="#000000" font-family="Verdana" font-size="12">card_id: INT REFERENCE ‘card’</text>
+</g>
+</svg>

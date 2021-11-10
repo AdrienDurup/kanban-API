@@ -1,0 +1,23 @@
+{
+  "name": "s06-okanban-red-adriendurup",
+  "version": "1.0.0",
+  "description": "## Description du projet",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-XIII/S06-oKanban-RED-AdrienDurup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-XIII/S06-oKanban-RED-AdrienDurup/issues"
+  },
+  "homepage": "https://github.com/O-clock-XIII/S06-oKanban-RED-AdrienDurup#readme"
+}

@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS "list";
+DROP TABLE IF EXISTS "card";
+DROP TABLE IF EXISTS "label";
+CREATE TABLE "list" (
+    ""
+)
