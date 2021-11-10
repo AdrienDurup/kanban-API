@@ -7,6 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
+    "start":"node-dev app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/O-clock-XIII/S06-oKanban-RED-AdrienDurup/issues"
   },
-  "homepage": "https://github.com/O-clock-XIII/S06-oKanban-RED-AdrienDurup#readme"
+  "homepage": "https://github.com/O-clock-XIII/S06-oKanban-RED-AdrienDurup#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "pg": "^8.7.1",
+    "sequelize": "^6.9.0"
+  }
 }
