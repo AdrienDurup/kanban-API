@@ -1,0 +1,17 @@
+=== MCD ===
+USER: ref_user:SERIAL PK, login : VARCHAR(255) NOT NULL UNIQUE,role:varchar(255) NOT NULL, password : VARCHAR(255) NOT NULL UNIQUE,email : text NOT NULL UNIQUE
+LIST: ref_list:SERIAL PK, name : VARCHAR(255), author: REFERENCE 'user'
+CARD: ref_card:SERIAL PK, title : VARCHAR(255) NOT NULL,position : INT NOT NULL,color : VARCHAR(255) ,list_id:INT,label_id : INT REFERENCE ‘label’
+LABEL:name :ref_label:SERIAL PK, VARCHAR(255) NOT NULL,card_id: INT REFERENCE ‘card’
+
+CRÉE, 0N USER, 11> LIST
+CONTIENT, 1N LIST, 1N> CARD
+APPARTIENT À, 0N> CARD, 0N> LABEL
+
+=== MLD ===
+USER ( ref_user:SERIAL PK, login : VARCHAR(255) NOT NULL UNIQUE, role:varchar(255) NOT NULL, password : VARCHAR(255) NOT NULL UNIQUE, email : text NOT NULL UNIQUE )
+LIST ( ref_list:SERIAL PK, name : VARCHAR(255), author: REFERENCE 'user', ref_user:SERIAL PK )
+CARD ( ref_card:SERIAL PK, title : VARCHAR(255) NOT NULL, position : INT NOT NULL, color : VARCHAR(255), list_id:INT, label_id : INT REFERENCE ‘label’ )
+LABEL ( name :ref_label:SERIAL PK, VARCHAR(255) NOT NULL, card_id: INT REFERENCE ‘card’ )
+CONTIENT ( ref_list:SERIAL PK, ref_card:SERIAL PK )
+APPARTIENT À ( ref_card:SERIAL PK, name :ref_label:SERIAL PK )
