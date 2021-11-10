@@ -1,0 +1,6 @@
+LISTE: nom
+LABEL: nom, couleur
+CARTE: description ,couleur, ordre
+
+APPARTIENT, 11 CARTE, 0N LISTE
+AVOIR, 0N LABEL, 0N CARTE
