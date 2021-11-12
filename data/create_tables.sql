@@ -38,7 +38,7 @@ CREATE TABLE "label" (
 CREATE TABLE "card_has_label" (
     "card_id" INTEGER NOT NULL REFERENCES card("id") ON DELETE CASCADE,
     "label_id" INTEGER NOT NULL REFERENCES list("id") ON DELETE CASCADE,
-    "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW()
     -- ici pas besoin de updated_at : une relation ne se met pas à jour, soit on l'ajoute, soit on la supprime
 );
 
@@ -48,7 +48,7 @@ INSERT INTO "list"("name")
 VALUES ('Première liste');
 
 INSERT INTO "card"("content", "color", "list_id")
-VALUE ('Carte 1', '#ff696', 1);
+VALUES ('Carte 1', '#ff696', 1);
 
 INSERT INTO "label"("name", "color")
 VALUES ('Urgent', '#F00');
