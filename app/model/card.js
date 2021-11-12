@@ -8,6 +8,14 @@ Card.init(
         name: {
             type: DataTypes.STRING,
 
+        },
+        color:{
+            type: DataTypes.STRING,
+
+        },
+        position:{
+            type: DataTypes.INTEGER,
+
         }
     },
     {

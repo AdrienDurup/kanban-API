@@ -12,13 +12,13 @@ VALUES
   ('Adrien'),
   ('Jeff');
 INSERT INTO
-  "card" ("title", "color", "list_id")
+  "card" ("title", "color","position", "list_id")
 VALUES
-  ('Back to the future', 'blue', 1),
-  ('Chien', '#f0f', 1),
-  ('Chat', 'red', 1),
-  ('Serpent', 'green', 1),
-  ('Serpent', 'green', 1);
+  ('Back to the future', 'blue',1, 1),
+  ('Chien', '#f0f',2, 1),
+  ('Chat', 'red',3, 1),
+  ('Serpent', 'green',4, 1),
+  ('Serpent', 'green',5, 1);
 INSERT INTO
   "label" ("color", "name")
 VALUES

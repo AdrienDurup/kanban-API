@@ -15,6 +15,7 @@ CREATE TABLE "card" (
     "id" SERIAL PRIMARY KEY,
     "title" VARCHAR(255),
     "color" VARCHAR(255),
+    "position" INTEGER,
     "list_id" INT NOT NULL REFERENCES "list"("id"),
     "created_at" TIMESTAMP NOT NULL DEFAULT NOW(),
     "updated_at" TIMESTAMP NOT NULL DEFAULT NOW()
