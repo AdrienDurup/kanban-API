@@ -17,6 +17,7 @@ Card.belongsToMany(Label, {
 	otherKey: "label_id",
 	as: "labels",
 	through: "card_has_label",
+	timestamps:false//se met à jour auto dans la base
 });
 
 Label.belongsToMany(Card, {
@@ -24,6 +25,7 @@ Label.belongsToMany(Card, {
 	otherKey: "card_id",
 	as: "cards",
 	through: "card_has_label",
+	timestamps:false
 });
 
 // Quizz.belongsToMany(Tag, {
