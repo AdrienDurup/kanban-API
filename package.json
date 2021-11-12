@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/O-clock-XIII/S06-oKanban-RED-Gension/issues"
   },
-  "homepage": "https://github.com/O-clock-XIII/S06-oKanban-RED-Gension#readme"
+  "homepage": "https://github.com/O-clock-XIII/S06-oKanban-RED-Gension#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.9.0"
+  }
 }
