@@ -10,7 +10,7 @@ const cardHasLabelController = {
         const card_id = req.body.card_id;
         try {
             const label = await Label.findByPk(label_id);
-            const result=await label.addCards(card_id);
+            const result=await label.addCard(card_id);
             console.log("CREATED ? ",result);
 
             res.json(result);
@@ -20,12 +20,13 @@ const cardHasLabelController = {
         }
     },
     delete: async (req, res) => {
-        const id = req.params.id;
+        const label_id = req.body.label_id;
+        const card_id = req.body.card_id;
         try {
-            let deleteInfo = await Label.destroy({
-                where: { id }
-            });
-            res.json(deleteInfo);
+            const label = await Label.findByPk(label_id);
+            const result=await label.removeCard(card_id);
+            console.log("DESTROYED ? ",result);
+            res.json(result);
         } catch (error) {
             console.trace(error);
             res.json({ error: error.message });
