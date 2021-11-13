@@ -1,7 +1,11 @@
 const {listController}=require("./listController");
-const {cardController}=require("./listController");
-const {labelController}=require("./listController");
+const {cardController}=require("./cardController");
+const {labelController}=require("./labelController");
+const {restController}=require("./restController");
+const {cardHasLabelController}=require("./cardHasLabelController");
 
 module.exports={listController,
     cardController,
-    labelController};
+    labelController,
+    cardHasLabelController,
+restController};

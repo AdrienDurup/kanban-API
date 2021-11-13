@@ -1,24 +1,15 @@
-const {
-    Card,
-    Label,
-    List
-} = require("../models");
+const { Label} = require("../models");
 
 
 const labelController = {
     findAll: async (req, res) => {
         console.log("test findall");
         try {
-            let lists = await List.findAll({
-                include: [{
-                    association: 'cards',
-                    include: [{
-                        association: 'labels'
-                    }]
-                }]
+            let labels = await Label.findAll({
+                include: 'cards',
             });
-            console.log(lists);
-            res.json(lists);
+            console.log(labels);
+            res.json(labels);
         } catch (error) {
             console.trace(error);
             res.json({error:error.message});
@@ -27,16 +18,11 @@ const labelController = {
     findOne: async (req, res) => {
         const id = req.params.id;
         try {
-            let list = await List.findByPk(id, {
-                include: [{
-                    association: 'cards',
-                    include: [{
-                        association: 'labels'
-                    }]
-                }]
+            let label = await Label.findByPk(id, {
+                include:'cards',
             });
-            console.log(list);
-            res.json(list);
+            console.log(label);
+            res.json(label);
         } catch (error) {
             console.trace(error);
             res.json({error:error.message});
@@ -45,20 +31,20 @@ const labelController = {
     create: async (req, res) => {
         console.log("CREATE");
         console.log(req.body.name);
-        const listToCreate = {
+        const labelToCreate = {
             name: req.body.name,
         }
         try {
-            let list = await List.findOrCreate(
+            let label = await Label.findOrCreate(
                 {
                     where: {
-                        name: listToCreate.name
+                        name: labelToCreate.name
                     },
-                    defaults: listToCreate
+                    defaults: labelToCreate
                 }
             );
-            console.log("CREATED ?", list[1]);
-            res.json(list);
+            console.log("CREATED ?", label[1]);
+            res.json(label);
         } catch (error) {
             console.trace(error);
             res.json({error:error.message});
@@ -68,7 +54,7 @@ const labelController = {
         const id = req.params.id;
         const data = req.body;
         try {
-            let updateResult = await List.update(data,
+            let updateResult = await Label.update(data,
                 {
                     where:{id}
                 }
@@ -82,7 +68,7 @@ const labelController = {
     delete: async (req, res) => {
         const id = req.params.id;
         try {
-            let deleteInfo = await List.destroy({
+            let deleteInfo = await Label.destroy({
                 where: {id}
             });
             res.json(deleteInfo);

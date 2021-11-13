@@ -1,8 +1,4 @@
-const {
-    Card,
-    Label,
-    Card
-} = require("../models");
+const {Card} = require("../models");
 
 
 const cardController = {
@@ -10,12 +6,7 @@ const cardController = {
         console.log("test findall");
         try {
             let cards = await Card.findAll({
-                include: [{
-                    association: 'cards',
-                    include: [{
-                        association: 'labels'
-                    }]
-                }]
+                include: ['list','labels']
             });
             console.log(cards);
             res.json(cards);
@@ -27,16 +18,11 @@ const cardController = {
     findOne: async (req, res) => {
         const id = req.params.id;
         try {
-            let list = await Card.findByPk(id, {
-                include: [{
-                    association: 'cards',
-                    include: [{
-                        association: 'labels'
-                    }]
-                }]
+            let card = await Card.findByPk(id, {
+                include:'labels'
             });
-            console.log(list);
-            res.json(list);
+            console.log(card);
+            res.json(card);
         } catch (error) {
             console.trace(error);
             res.json({error:error.message});
@@ -44,21 +30,13 @@ const cardController = {
     },
     create: async (req, res) => {
         console.log("CREATE");
-        console.log(req.body.name);
-        const listToCreate = {
-            name: req.body.name,
-        }
+        const cardToCreate = req.body;
         try {
-            let list = await Card.findOrCreate(
-                {
-                    where: {
-                        name: listToCreate.name
-                    },
-                    defaults: listToCreate
-                }
+            let card = await Card.create(
+                cardToCreate
             );
-            console.log("CREATED ?", list[1]);
-            res.json(list);
+            console.log("CREATED ?", card);
+            res.json(card);
         } catch (error) {
             console.trace(error);
             res.json({error:error.message});
@@ -94,6 +72,4 @@ const cardController = {
 };
 
 
-module.exports = {
-    cardController
-};
+module.exports = {cardController};

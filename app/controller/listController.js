@@ -1,8 +1,4 @@
-const {
-    Card,
-    Label,
-    List
-} = require("../models");
+const { List } = require("../models");
 
 
 const listController = {
