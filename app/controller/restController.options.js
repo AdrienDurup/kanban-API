@@ -2,6 +2,7 @@
 const options = {
     "List": {
         findOrCreate: false,
+        required:["name"],//required fields for creation
         findAll: {
             include: {
                 association: 'cards',
@@ -28,6 +29,7 @@ const options = {
     },
     "Card": {
         findOrCreate: false,
+        required:["content","list_id"],
         findAll: {
             include: ['list', 'labels'],
             order: [
@@ -39,6 +41,7 @@ const options = {
         }
     },
     "Label": {
+        required:["name"],
         findOrCreate: function (reqObj) {
             return {
                 where: {

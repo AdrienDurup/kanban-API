@@ -9,15 +9,19 @@ const cardController = {
                 include: ['list','labels']
             });
             console.log(cards);
+            if(cards){
             res.json(cards);
+            }else{
+                res.status(404).json({error:"Aucune carte trouvée."});
+            };
         } catch (error) {
             console.trace(error);
             res.json({error:error.message});
         }
     },
     findOne: async (req, res) => {
-        const id = req.params.id;
         try {
+        const id = req.params.id;
             let card = await Card.findByPk(id, {
                 include:'labels'
             });
@@ -30,8 +34,8 @@ const cardController = {
     },
     create: async (req, res) => {
         console.log("CREATE");
-        const cardToCreate = req.body;
         try {
+        const cardToCreate = req.body;
             let card = await Card.create(
                 cardToCreate
             );
@@ -43,9 +47,9 @@ const cardController = {
         }
     },
     update: async (req, res) => {
+        try {
         const id = req.params.id;
         const data = req.body;
-        try {
             let updateResult = await Card.update(data,
                 {
                     where:{id}
@@ -58,8 +62,8 @@ const cardController = {
         }
     },
     delete: async (req, res) => {
-        const id = req.params.id;
         try {
+        const id = req.params.id;
             let deleteInfo = await Card.destroy({
                 where: {id}
             });
