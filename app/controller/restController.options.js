@@ -1,27 +1,38 @@
+/* Contient toutes les options pour les requetes sequelize */
 const options = {
     "List": {
         findOrCreate: false,
         findAll: {
-            include: [{
+            include: {
                 association: 'cards',
-                include: [{
+                include: {
                     association: 'labels'
-                }]
-            }]
+                }
+            },
+            order: [
+                ['position', 'ASC'],
+                ['cards', 'position', 'ASC']
+            ]
         },
         findOne: {
-            include: [{
+            include: {
                 association: 'cards',
-                include: [{
+                include: {
                     association: 'labels'
-                }]
-            }]
+                }
+            },
+            order: [
+                ['cards', 'position', 'ASC']
+            ]
         },
     },
     "Card": {
         findOrCreate: false,
         findAll: {
-            include: ['list', 'labels']
+            include: ['list', 'labels'],
+            order: [
+                ['position','ASC']
+            ]
         },
         findOne: {
             include: 'labels'
@@ -29,7 +40,7 @@ const options = {
     },
     "Label": {
         findOrCreate: function (reqObj) {
-          return  {
+            return {
                 where: {
                     name: reqObj.name
                 },
