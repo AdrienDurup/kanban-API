@@ -138,6 +138,36 @@ const labelController = {
     },
     removeFromCard: async (req, res) => {
         try {
+            const {
+                card_id,
+                label_id
+            } = req.params;
+
+            // CARTE 
+            let card = await Card.findByPk(card_id, {
+                include: ['labels']
+            });
+            if (!card) {
+                return res.status(404).json(`Can not find card with id ${card_id}`);
+            }
+
+            // LABEL 
+            const label = await Label.findByPk(label_id);
+            if (!label) {
+                return res.status(404).json(`Can not find label with id ${label_id}`);
+            }
+
+            // On souhaite ajouter un label sur une carte
+
+            // Magie de sequelize ! 
+            await card.removeLabel(label);
+
+            // On doit récupérer a nouveau la carte pour voir la MaJ
+            card = await Card.findByPk(card_id, {
+                include: ['labels']
+            });
+
+            res.json(card);
 
         } catch (error) {
             console.trace(error);

@@ -22,6 +22,7 @@ router.post('/cards', cardController.createOne);
 router.patch('/cards/:id', cardController.updateOne);
 router.delete('/cards/:id', cardController.deleteOne);
 router.post('/cards/:id/label', labelController.associateToCard);
+router.post('/cards/:card_id/label/:label_id', labelController.removeFromCard);
 
 router.get('/labels', labelController.getAll);
 router.get('/labels/:id', labelController.getOne);
