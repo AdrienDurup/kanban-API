@@ -37,7 +37,7 @@ CREATE TABLE "label" (
 
 CREATE TABLE "card_has_label" (
     "card_id" INTEGER NOT NULL REFERENCES card("id") ON DELETE CASCADE,
-    "label_id" INTEGER NOT NULL REFERENCES list("id") ON DELETE CASCADE,
+    "label_id" INTEGER NOT NULL REFERENCES label("id") ON DELETE CASCADE,
     "created_at" TIMESTAMPTZ NOT NULL DEFAULT NOW()
     -- ici pas besoin de updated_at : une relation ne se met pas à jour, soit on l'ajoute, soit on la supprime
 );
