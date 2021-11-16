@@ -8,7 +8,7 @@ const bodySanitizer = require("./app/middlewares/body-sanitizer");
 const port = process.env.OK_PORT;
 
 const corsOptions={
-    origin:"localhost:3000/*"
+    //origin:"file:///var/www/html/XIII/s06/okanban/oKanBanFront/"
 }
 
 const app = express();
