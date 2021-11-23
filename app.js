@@ -22,7 +22,7 @@ app.use(bodySanitizer);
 
 app.use(router);
 
-
+app.use("/assets",express.static('assets'));
 
 app.listen(port, () => {
     console.log(`Listening on ${port}`);

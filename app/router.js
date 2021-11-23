@@ -1,5 +1,6 @@
 const express = require("express");
 const { listController, restController,cardController,labelController,cardHasLabelController } = require("./controller");
+const path=require("path");
 const router = express.Router();
 //router.use(restController.getRoute);
 router.get("/rest/:object", restController.findAll);
@@ -11,6 +12,11 @@ router.delete("/rest/:object/:id", restController.delete);
 /* Associations */
 router.post("/rest/:source/:source_id/:target/:target_id", restController.createAssociation);
 router.delete("/rest/:source/:source_id/:target/:target_id", restController.deleteAssociation);
+
+router.get("/",(req,res)=>{
+let filePath=path.join(__dirname,'../assets/index.html');
+res.sendFile(filePath);
+});
 // router.get("/lists", listController.findAll);
 // router.get("/lists/:id", listController.findOne);
 // router.post("/lists/", listController.create);
