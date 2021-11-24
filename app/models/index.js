@@ -15,7 +15,6 @@ Card.belongsTo(List, {
     foreignKey: 'list_id'
 });
 
-
 // N CARTES <-> N LABELS VIA card_has_label
 
 Card.belongsToMany(Label, {
