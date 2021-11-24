@@ -51,9 +51,9 @@
         <!-- <form action="" class="labelMain"> -->
         <span class="tag labelMain" data-label-id="TI" data-label-color="TC" draggable="true">
             <div class="labelName"></div>
-            <form class="is-hidden editLabel">
+            <form class="is-hidden ad-label-form editLabel">
                 <input type="text" name="name" class="ad-label-input nameInput" placeholder="nom">
-                <input type="text" name="color" class="ad-label-input colorInput" placeholder="couleur">
+                <input type="color" name="color" class="ad-label-input ad-label-input--color colorInput" placeholder="couleur">
                 <!-- Pour activer la touche entrée on peut passer le bouton en invisible avec la class is-hidden,
                 il sera toujours actif en tant que submitter -->
                 <button class="ad-label-button">ok</button>
@@ -201,7 +201,7 @@
                     <div class="field">
                         <label class="label">Couleur</label>
                         <div class="control">
-                            <input type="text" class="input" name="color" value="#F0F" placeholder="couleur du label">
+                            <input type="color" class="input" name="color" value="#FFFFFF" placeholder="couleur du label">
                         </div>
                     </div>
                 </section>
@@ -250,14 +250,14 @@
                     <div class="field">
                         <label class="label">Texte</label>
                         <div class="control">
-                            <input type="textarea" class="input" name="content" value=""
-                                placeholder="Texte de la carte">
+                            <textarea class="input" name="content"
+                                placeholder="Texte de la carte"></textarea>
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Couleur</label>
                         <div class="control">
-                            <input type="textarea" class="input" name="color" value=""
+                            <input type="color" class="input" name="color" value=""
                                 placeholder="Toute valeur CSS valide. Défaut : #FFF.">
                         </div>
                     </div>
